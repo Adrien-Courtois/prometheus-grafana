@@ -222,7 +222,7 @@ Il faut maintenant indiquer à prometheus où aller chercher les metrics
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-Ajouter les lignes suivantes à la fin du fichier dans le bloc "scrape_configs" :
+Ajouter les lignes suivantes à la fin du fichier dans le bloc "scrape_configs" (c'est dans la vairable `targets` qu'on recense tout les serveurs sur lesquels nous avons besoins de metrics) :
 ```
 - job_name: "node"
     static_configs:
